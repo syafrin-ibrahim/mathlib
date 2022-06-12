@@ -1,13 +1,17 @@
 package mathlib
 
-func OddNumber(number int)string{
+func OddNumber(n ...int) string {
 	var state string
-	result := number % 2
-
-	if result == 0 {
-		state = "ini bilangan genap"
-	}else{
-		state = "ini bilangan ganjil"
+	var res int
+	for _, e := range n {
+		res += e
 	}
+	if res%2 == 0 {
+		state = "genap"
+	} else {
+		state = "ganjil"
+	}
+
 	return state
+
 }
