@@ -2,11 +2,11 @@ package mathlib
 
 func OddNumber(n ...int) string {
 	var state string
-	var res int
+	var result int
 	for _, e := range n {
-		res += e
+		result += e
 	}
-	if res%2 == 0 {
+	if result%2 == 0 {
 		state = "genap"
 	} else {
 		state = "ganjil"
