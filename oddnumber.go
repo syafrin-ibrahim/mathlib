@@ -1,17 +1,14 @@
 package mathlib
 
-func OddNumber(n ...int) []string {
-	var state []string
+func OddNumber(n int) string {
+	var state string
+	result := n % 2
 
-	for _, e := range n {
-		if e%2 == 0 {
-			state = append(state, "genap")
-		} else {
-			state = append(state, "ganjil")
-		}
-
+	if result == 0 {
+		state = "ini bilangan genap"
+	} else {
+		state = "ini bilangan ganjil"
 	}
-
 	return state
 
 }
