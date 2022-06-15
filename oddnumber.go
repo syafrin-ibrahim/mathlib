@@ -1,15 +1,15 @@
 package mathlib
 
-func OddNumber(n ...int) string {
-	var state string
-	var result int
+func OddNumber(n ...int) []string {
+	var state []string
+
 	for _, e := range n {
-		result += e
-	}
-	if result%2 == 0 {
-		state = "genap"
-	} else {
-		state = "ganjil"
+		if e%2 == 0 {
+			state = append(state, "genap")
+		} else {
+			state = append(state, "ganjil")
+		}
+
 	}
 
 	return state
