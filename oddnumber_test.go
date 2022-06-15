@@ -10,12 +10,12 @@ func TestOddNumber(t *testing.T) {
 	sample := []struct {
 		name            string
 		input           []int
-		expectedOutCome string
+		expectedOutCome []string
 	}{
-		{name: "01", input: []int{5, 3, 2, 1}, expectedOutCome: "ganjil"},
-		{name: "02", input: []int{2, 6, 1, 3}, expectedOutCome: "genap"},
-		{name: "03", input: []int{7, 3, 3, 2}, expectedOutCome: "ganjil"},
-		{name: "04", input: []int{10, 1, 4, 3}, expectedOutCome: "genap"},
+		{name: "01", input: []int{5, 3, 2, 1}, expectedOutCome: []string{"ganjil", "ganjil", "genap", "ganjil"}},
+		{name: "02", input: []int{2, 6, 1, 3}, expectedOutCome: []string{"genap", "genap", "ganjil", "ganjil"}},
+		{name: "03", input: []int{7, 3, 3, 2}, expectedOutCome: []string{"ganjil", "ganjil", "ganjil", "genap"}},
+		{name: "04", input: []int{10, 1, 4, 3}, expectedOutCome: []string{"genap", "ganjil", "genap", "ganjil"}},
 	}
 	assert := assert.New(t)
 	for _, sample := range sample {
